@@ -23,7 +23,7 @@ void draw(){
   
   //===時===
   stroke(255, 69, 0);               //線の色
-  arc(70,100,100,100,radians(270),radians(270)+radians(map(hour() + (minute()/60.0), 0, 24, 0, 360)));       //弧の表示
+  arc(70,100,100,100,radians(270),radians(270)+radians(map(hour()%12 + (minute()/60.0), 0, 12, 0, 360)));       //弧の表示
   text(hour() + "h", 70, 110);      //文字表示
   
   //===分===
